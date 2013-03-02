@@ -123,7 +123,7 @@ class Dutu {
      *
      * @access public
      * @param component - an associative array holding a set of components
-     * @param dependency - an object dependent on by a component 
+     * @param dependency - a component's dependency
      * @return object
      * @author Tafadzwa Gonera
      */
