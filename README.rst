@@ -49,5 +49,5 @@ or we can register components with their dependencies too::
 
 At a glance Dutu does not explicitly draw a marked distinction
 between parameters and services when defining them, instead it
-hides this distinction for the users. Parameters and services
+hides this distinction from the users. Parameters and services
 are simply referred to as ``components``
