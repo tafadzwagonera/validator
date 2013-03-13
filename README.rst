@@ -4,7 +4,8 @@ Dutu
 Dutu is a small PHP dependency injection container for PHP 5.3 that
 consists of a file with about a hundred lines of code. Dutu is a 
 derivation of Fabien Pontencier's Pimple **but** its style of 
-operation is different from Pimple. Dutu aims for **intuitive** use.
+operation is different from Pimple. Dutu's style of operation has 
+one goal in mind: **intuitive** use.
 
 To use Dutu download it and require it in your code::
 
@@ -15,12 +16,12 @@ and then create the container by instantiating the ``Dutu`` class::
     $dutu = new Dutu();
 
 
-Defining parameters and services
-_______________________
+Defining Parameters and Services
+________________________________
 
-There are two ways to define parameterananan in dutu. The first method
-involves passing an associative array to Dutu's ``__construct``
-method during instantion::
+There are two ways to define parameter and/or services in dutu. The
+first method involves passing an associative array to
+Dutu's ``__construct`` method during instantion::
 
   //the list of parameters
   $parameters = array(
@@ -30,21 +31,23 @@ method during instantion::
 
 Passing parameters to the container::
   
-  //passing parameters to Dutu
   $dutu = Dutu($parameters);
 
-  //instatiates your database class
+  //instantiates your database class
   $dutu->pdoImpl;
 
 The second method involves passing an associative array of 
-parameters to Dutu's ``registerComponents`` method::
+parameters and/or services to Dutu's ``registerComponents`` method::
 
   $dutu->registerComponents($components);
 
 or we can register components with their dependencies too::
 
-  $dutu->registerComponents($components, $dutu->config);
+   //only works if all the components in the array
+   //have a common dependency
+   $dutu->registerComponents($components, $dutu->config);
 
 At a glance Dutu does not explicitly draw a marked distinction
-between parameters and services when defining them instead it
-hides this distinction.
+between parameters and services when defining them, instead it
+hides this distinction for the users. Parameters and services
+are simply referred to as ``components``
