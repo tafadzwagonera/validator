@@ -21,7 +21,7 @@ ________________________________
 
 There are two ways to define parameters and/or services in dutu. The
 first method involves passing an associative array to
-Dutu's ``__construct`` method during instantion::
+Dutu's ``__construct`` method during instantiation::
 
   //the list of parameters
   $parameters = array(
