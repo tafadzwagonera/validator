@@ -19,7 +19,7 @@ and then create the container by instantiating the ``Dutu`` class::
 Defining Parameters and Services
 ________________________________
 
-There are two ways to define parameter and/or services in dutu. The
+There are two ways to define parameters and/or services in dutu. The
 first method involves passing an associative array to
 Dutu's ``__construct`` method during instantion::
 
