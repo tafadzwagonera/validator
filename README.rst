@@ -15,31 +15,37 @@ and then create the container by instantiating the ``Dutu`` class::
 
     $dutu = new Dutu();
 
+Defining Parameters
+___________________
 
-Defining Parameters and Services
-________________________________
+It is as easy as abc. This is how we do it::
 
-There are two ways to define parameters and/or services in dutu. The
-first method involves passing an associative array to
-Dutu's ``__construct`` method during instantiation::
+    $dutu->cookie_name = 'SESSION_ID';
 
-  //the list of parameters
-  $parameters = array(
-    'pdoImpl' => 'PDOImpl',
-    'mysqliImpl' => 'mysqliImpl'
-  );
+Defining Services
+_________________
 
-Passing parameters to the container::
-  
-  $dutu = Dutu($parameters);
+There are two ways to define services in dutu. The first method involves
+passing an associative array to Dutu's ``__construct`` method during
+instantiation::
 
-  //instantiates your database class
-  $dutu->pdoImpl;
+    //a list of database services
+    $parameters = array(
+        'pdoImpl' => 'PDOImpl',
+        'mysqliImpl' => 'mysqliImpl'
+    );
 
-The second method involves passing an associative array of 
-parameters and/or services to Dutu's ``registerComponents`` method::
+Then passing the array to the container::
 
-  $dutu->registerComponents($components);
+    $dutu = Dutu($parameters);
+
+    //instantiates your database class
+    $dutu->pdoImpl;
+
+The second method involves passing an associative array of services to Dutu's
+``registerComponents`` method::
+
+    $dutu->registerComponents($components);
 
 or we can register components with their dependencies too::
 
@@ -47,7 +53,4 @@ or we can register components with their dependencies too::
    //have a common dependency
    $dutu->registerComponents($components, $dutu->config);
 
-At a glance Dutu does not explicitly draw a marked distinction
-between parameters and services when defining them, instead it
-hides this distinction from the users. Parameters and services
-are simply referred to as ``components``
+
