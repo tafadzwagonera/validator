@@ -17,7 +17,7 @@
 * All the classes used in this sample have been bundled into a single
 *  .php file for brevity's sake.
 */
-require_once('lib/Dutu.php');
+require_once('../lib/Dutu.php');
 
 class Config {
 	/**
