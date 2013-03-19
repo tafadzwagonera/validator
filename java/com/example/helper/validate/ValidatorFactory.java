@@ -1,14 +1,14 @@
-package com.example.helper.validate;
-
 /**
  * Creates a Validator implementation that performs validation on incoming data
  *
  * @package com.example.helper.validate
+ *
  * @author Tafadzwa Gonera <tafadzwagonera@gmail.com>
  * @version 1.0v
- * @since 1.0v
- * @filesource ValidatorFactory.java
+ * @since 1.0v @filesource ValidatorFactory.java
  */
+package com.example.helper.validate;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -47,6 +47,7 @@ public class ValidatorFactory {
      * instantiates a Validator implementaton
      *
      * @access public
+     *
      * @param key - a Validator implementation to be created
      * @return boolean - an implementation of Validator
      * @throws IllegalArgumentException
@@ -65,11 +66,11 @@ public class ValidatorFactory {
                 //do something meaningful with the exception
                 System.out.println(e);
             } catch (InstantiationException e) {
-                
+
                 //do something meaningful with the exception
                 System.out.println(e);
             } catch (IllegalAccessException e) {
-                
+
                 //do something meaningful with the exception
                 System.out.println(e);
             }

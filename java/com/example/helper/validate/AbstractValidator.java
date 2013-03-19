@@ -1,14 +1,14 @@
-package com.example.helper.validate;
-
 /**
  * Provides default behavior for a Validator implementation
  *
  * @package com.example.helper.validate
+ *
  * @author Tafadzwa Gonera <tafadzwagonera@gmail.com>
  * @version 1.0v
- * @since 1.0v
- * @filesource AbstractValidator.java
+ * @since 1.0v @filesource AbstractValidator.java
  */
+package com.example.helper.validate;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -41,6 +41,7 @@ public class AbstractValidator implements Validator {
      * matches a subject to a regular expression pattern
      *
      * @access public
+     *
      * @param regex - a regular expression pattern
      * @param subject - a string to be matched against the regex
      * @return boolean - returns true if the string matches, false otherwise
@@ -69,9 +70,10 @@ public class AbstractValidator implements Validator {
      * checks if a string can be converted to a number
      *
      * @access public
+     *
      * @param subject - a string to be converted to a number
-     * @return integer - returns a number if the string is can be converted
-     * to a number, BAD_NUMBER otherwise
+     * @return integer - returns a number if the string is can be converted to a
+     * number, BAD_NUMBER otherwise
      * @author Tafadzwa Gonera
      */
     public int isNumeric(final String subject) {

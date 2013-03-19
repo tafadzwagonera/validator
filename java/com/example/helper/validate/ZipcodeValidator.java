@@ -1,16 +1,16 @@
-package com.example.helper.validate;
-
-import java.util.regex.Pattern;
-
 /**
  * A validation strategy for a zip code
  *
  * @package com.example.helper.validate
+ *
  * @author Tafadzwa Gonera <tafadzwagonera@gmail.com>
  * @version 1.0v
- * @since 1.0v
- * @filesource ZipcodeValidator.java
+ * @since 1.0v @filesource ZipcodeValidator.java
  */
+package com.example.helper.validate;
+
+import java.util.regex.Pattern;
+
 public class ZipcodeValidator extends AbstractValidator {
 
     public ZipcodeValidator() {

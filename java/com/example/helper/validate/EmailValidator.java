@@ -1,14 +1,14 @@
-package com.example.helper.validate;
-
 /**
  * A validation strategy for an email
  *
  * @package com.example.helper.validate
+ *
  * @author Tafadzwa Gonera <tafadzwagonera@gmail.com>
  * @version 1.0v
- * @since 1.0v
- * @filesource EmailValidator.java
+ * @since 1.0v @filesource EmailValidator.java
  */
+package com.example.helper.validate;
+
 public class EmailValidator extends AbstractValidator {
 
     public EmailValidator() {

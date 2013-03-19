@@ -1,14 +1,14 @@
-package com.example.helper.validate;
-
 /**
  * Describes the behavior of a Validator implementation
  *
  * @package com.example.helper.validate
+ *
  * @author Tafadzwa Gonera <tafadzwagonera@gmail.com>
  * @version 1.0v
- * @since 1.0v
- * @filesource Validator.java
+ * @since 1.0v @filesource Validator.java
  */
+package com.example.helper.validate;
+
 public interface Validator {
 
     /**
@@ -22,7 +22,7 @@ public interface Validator {
      *
      * @access public
      */
-    String ADDRESS_REGEX = "^[a-zA-Z0-9 #_-]{5,30}$";    
+    String ADDRESS_REGEX = "^[a-zA-Z0-9 #_-]{5,30}$";
     /**
      * @var ZIPCODE_REGEX - a pattern for matching a zipcode
      *
@@ -56,6 +56,7 @@ public interface Validator {
      * algorithm
      *
      * @access public
+     *
      * @param subject - a string to be matched against the regex
      * @return boolean - returns true if the string matches, false otherwise
      * @author Tafadzwa Gonera
@@ -66,6 +67,7 @@ public interface Validator {
      * matches a subject to a regular expression pattern
      *
      * @access public
+     *
      * @param regex - a regular expression pattern
      * @param subject - a string to be matched against the regex
      * @return boolean - returns true if the string matches, false otherwise

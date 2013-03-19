@@ -1,14 +1,14 @@
-package com.example.helper.validate;
-
 /**
  * A validation strategy for a name
  *
  * @package com.example.helper.validate
+ *
  * @author Tafadzwa Gonera <tafadzwagonera@gmail.com>
  * @version 1.0v
- * @since 1.0v
- * @filesource NameValidator.java
+ * @since 1.0v @filesource NameValidator.java
  */
+package com.example.helper.validate;
+
 public class NameValidator extends AbstractValidator {
 
     public NameValidator() {

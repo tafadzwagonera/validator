@@ -39,13 +39,13 @@ public class FormController extends HttpServlet {
         String[] array = null;
 
         //an array holding permissible fields
-        array = new String[]{"firstname", "lastname", "address", "zipcode", "phone", "street", "email"};       
+        array = new String[]{"firstname", "lastname", "address", "zipcode", "phone", "street", "email"};
         List<String> allowedFields = new ArrayList<String>(Arrays.asList(array));
-        
+
         //an array holding required fields
-        array = new String[]{"firstname", "lastname", "address", "email", "zipcode"};       
+        array = new String[]{"firstname", "lastname", "address", "email", "zipcode"};
         List<String> requiredFields = new ArrayList<String>(Arrays.asList(array));
-        
+
         //a map to hold incoming data
         Map<String, String> fields = new HashMap<String, String>();
 
@@ -67,7 +67,7 @@ public class FormController extends HttpServlet {
                 }
             }
         }
-        
+
         //proceed if all validations were met
         if (proceed) {
             proceed = true;
@@ -76,10 +76,10 @@ public class FormController extends HttpServlet {
             ValidatorFactory validatorFactory = new ValidatorFactory();
 
             for (Map.Entry<String, String> field : fields.entrySet()) {
-                
+
                 //is this a required field?
                 if (ValidatorContext.inArray(requiredFields, field)) {
-                    
+
                     //then validate it using an approriate valiation algorithm
                     validator = validatorFactory.getValidator(field.getKey());
                     validatorContext = new ValidatorContext(validator);
@@ -87,11 +87,11 @@ public class FormController extends HttpServlet {
                         proceed = false;
                         break;
                     }
-                }                
+                }
             }
-            
+
             //proceed if all validations were met
-            if(proceed) {
+            if (proceed) {
                 out.println("Yey!!");
                 //instantiate entity and populate with data here                
             } else {
