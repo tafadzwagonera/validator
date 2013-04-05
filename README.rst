@@ -14,11 +14,6 @@ Configuring Validator to work in your project is easy. Simply download_ the
 API and copy the ``java\com`` folder into the source
 package of your project.
 
-  **NB:** If you are working on a JavaEE application you might want to go 
-  through ``java\com\example\web\FormController.java`` which illustrates how
-  to use the Validator API in a JavaEE environment using a ``Servlet`` as a
-  naive example.  
-
 .. _Download: https://github.com/tafadzwagonera/validator
 
 To change the package name of the API perform the following instruction:
@@ -98,5 +93,9 @@ In your code perform the following::
   validatorContext.validate("fieldData");
   // fieldData is the data associated with the field to be validated 
   ... some code
+
+**NB:** If you are working on a JavaEE application you might want to go through
+``java\com\example\web\FormController.java`` which illustrates how to use the Validator
+API in a JavaEE environment using a ``Servlet`` as a naive example.  
 
 That's all folks.
