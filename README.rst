@@ -64,21 +64,12 @@ and add a new binding in the static block::
     // other bindings ...        
     validators = Collections.unmodifiableMap(map);
   }
-  /*
-  The string "FooValidator" should literally represent a Java class that
-  extends AbstractValidator.java and should override its method:
-  ``boolean validate(final String subject);``
-  See other validation strategies for a clarity on this issue.
-  */
 
-Make sure that you have added the following lines of code prior to 
-calling any method of the API::
+**NB:** The string "FooValidator" should literally represent a Java class that
+extends AbstractValidator.java and should override its method:
+``boolean validate(final String subject);``
 
-  import com.example.helper.validate.Validator;
-  import com.example.helper.validate.ValidatorContext;
-  import com.example.helper.validate.ValidatorFactory;
-
-In your code perform the following::
+Add the following code where you want to apply the validation::
 
   ... some code 
   ValidatorFactory validatorFactory = new ValidatorFactory();
@@ -89,7 +80,7 @@ In your code perform the following::
   ... some code
 
 **NB:** If you are working on a JavaEE application you might want to go through
-``java\com\example\web\FormController.java`` which illustrates how to use the Validator
-API in a JavaEE environment using a ``Servlet`` as a naive example.  
+``java\com\example\web\FormController.java`` which illustrates how to use the
+Validator API in a JavaEE environment using a ``Servlet`` as a naive example.  
 
 That's all folks.
