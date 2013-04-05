@@ -20,26 +20,19 @@ To change the package name of the API perform the following instruction:
 
 Open the following file: ``com\example\helper\validate\ValidatorFactory.java``
 and modify the ``String`` initializing ``packageName`` variable in 
-ValidatorFactory.java. Modify this code from:: 
+ValidatorFactory.java from:: 
 
-  /**
-    * @var packageName - a package name of Validator implementations
-    *
-    * @access private
-  */
   private String packageName = "com.example.helper.validate.";
 
 to::
 
-  /**
-    * @var packageName - a package name of Validator implementations
-    *
-    * @access private
-  */
   private String packageName = "com.companyname.helper.validate.";
   // where "companyname" is the actual name of your company
 
-That's all, we are done!  
+That's all, we are done!
+
+  **NB:** Don't forget to rename your package to
+  ``com\companyname\helper\validate``
 
 Using Validator
 _______________
