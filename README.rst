@@ -65,8 +65,8 @@ and add a new binding in the static block::
     validators = Collections.unmodifiableMap(map);
   }
 
-**NB:** The string "FooValidator" should literally represent a Java class that
-extends AbstractValidator.java and should override its method:
+**NB:** The string ``"FooValidator"`` should literally represent a Java class that
+extends ``AbstractValidator.java`` and should override its method:
 ``boolean validate(final String subject);``
 
 Add the following code where you want to apply the validation::
